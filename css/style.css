@@ -53,17 +53,15 @@ footer{
 }
 
 .btn-big{
-    display: block;
+    /* display: block; */
     background-color: white;
     color: #23272a;
     border-radius: 50px;
-    padding: 20px 30px;
+    padding: 15px 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
-
-
 
 .black{
     background-color: #23272a;
@@ -92,6 +90,7 @@ nav a:hover{
 }
 
 .flexbox{
+    max-width: 80%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -111,14 +110,14 @@ header nav ul{
 .hero{
     background-image: url('../img/jumbo.png');
     background-size: contain;
-    height: 710px; 
+    height: 445px; 
     color: white; 
 
     position: relative;
 }
 
 .inner-hero{
-    max-width: 850px;
+    /* max-width: 850px; */
     text-align: center;
 
     position: absolute;
@@ -135,12 +134,12 @@ header nav ul{
 }
 
 h1{
-    font-size: 62px;
+    font-size: 42px;
     padding-bottom: 50px;
 }
 
 header p{
-    font-size: 22px;
+    font-size: 18px;
     padding-bottom: 25px;
     line-height: 1.5;
 }
@@ -164,9 +163,9 @@ main div{
     padding: 100px 0;
     color: #23272a;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    column-gap: 150px;
+    /* column-gap: 20px; */
 }  
 
 .txt{
@@ -175,7 +174,7 @@ main div{
 }
 
 main h2{
-    font-size: 50px;
+    font-size: 42px;
     padding-bottom: 30px;
 }
 
@@ -191,17 +190,38 @@ main p{
     flex-direction: row-reverse;
     justify-content: center;
     align-items: flex-start;
-    column-gap: 150px;
+    column-gap: 50px;
 }
 
 .single-column{
-    text-align: center;
+   text-align: center;
     padding-bottom: 150px;
+ 
 }
+
+.contents{
+    width: 700px;
+}
+
+.contents h2{
+    font-size: 32px;
+}
+.contents p{
+    font-size: 14px;
+}
+
+.call-to-acrion h3{
+    font-size: 28px;
+   padding-bottom: 50px; 
+}
+
+
+
 
 /* FOOTER */
 
 .footer-container{
+    width: 80%;
     max-width: 1170px;
     margin: 0 auto;
     padding: 70px 0;
@@ -213,7 +233,6 @@ main p{
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 30px;
-    column-gap: 40px;
 }
 
 .footer-col h3{
@@ -233,18 +252,22 @@ main p{
 }
 
 .footer-col h4{
-    color: #7289da;
-   
+    color: #7289da; 
 }
 
 hr {
-    border: 1px  solid #7289da;
+    border-color: #7289da;
 }
 
 .footer-bottom{
    display: flex;
    justify-content: space-between;
    padding-top: 30px;
+}
+
+.social-links i{
+    padding: 20px 10px 0 0;
+    color: white;
 }
 
 
