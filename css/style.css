@@ -43,6 +43,10 @@ footer{
     background-color: #f6f6f6;
 }
 
+.bg-white{
+    background-color: white;
+}
+
 /* BUTTONS */
 
 .btn-small{
@@ -152,7 +156,7 @@ header p{
     color: #23272a;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     column-gap: 150px;
 }  
 
