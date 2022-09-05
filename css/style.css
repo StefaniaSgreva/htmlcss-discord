@@ -39,14 +39,6 @@ footer{
     margin: 0 auto;
 }
 
-.bg-gray{
-    background-color: #f6f6f6;
-}
-
-.bg-white{
-    background-color: white;
-}
-
 /* BUTTONS */
 
 .btn-small{
@@ -75,6 +67,11 @@ footer{
 
 .black{
     background-color: #23272a;
+    color: white;
+}
+
+.liliac{
+    background-color: #8ea1e1;
     color: white;
 }
 
@@ -149,9 +146,21 @@ header p{
 }
 
 /*SECTIONS */
-.flex-container{
+
+main div{
     width: 80%;
     margin: 0 auto;
+}
+
+.bg-gray{
+    background-color: #f6f6f6;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.flex-container{
     padding: 100px 0;
     color: #23272a;
     display: flex;
@@ -176,8 +185,6 @@ main p{
 }
 
 .flex-container-reverse{
-    width: 80%;
-    margin: 0 auto;
     padding: 100px 0;
     color: #23272a;
     display: flex;
@@ -186,3 +193,56 @@ main p{
     align-items: flex-start;
     column-gap: 150px;
 }
+
+.single-column{
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+/* FOOTER */
+
+.footer-container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.footer-row{
+    line-height: 1.8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+    column-gap: 40px;
+}
+
+/* .footer-col{
+    padding: 0 15px;
+} */
+
+.footer-col h4{
+    color: #7289da;
+    padding-bottom: 10px;
+    
+}
+
+.footer-col h3{
+    font-size: 32px;
+    color: #7289da;
+    padding-bottom: 20px;
+    width: 250px;
+}
+
+hr {
+    border: 1px  solid #7289da;
+}
+
+.footer-bottom{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 30px;
+}
+
+
+ 
+
