@@ -67,9 +67,7 @@ footer{
     font-weight: bold;
 }
 
-.white{
 
-}
 
 .black{
     background-color: #23272a;
@@ -147,4 +145,29 @@ header p{
 }
 
 /*SECTIONS */
-    
+.flex-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    color: #23272a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 150px;
+}  
+
+.txt{
+    max-width: 400px;
+}
+
+main h2{
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+main p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
