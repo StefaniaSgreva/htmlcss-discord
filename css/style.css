@@ -1,0 +1,62 @@
+/* colors:
+#3161e0; BLU Header 
+#23272a sort-of-black
+#f6f6f6 GRAY*/
+
+
+/* UTILITY */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.debug{ /*da rimuovere*/
+    border: 1px solid black;
+    min-height: 100px;
+}
+
+/* GENERAL RULES */
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+
+header{
+    background-color: #3161e0;
+}
+
+footer{
+    background-color: #23272a;
+    color: white;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.bg-gray{
+    background-color: #f6f6f6;
+}
+
+.btn{
+    display: block;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
