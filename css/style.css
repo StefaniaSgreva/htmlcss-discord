@@ -211,26 +211,30 @@ main p{
     line-height: 1.8;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 30px;
     column-gap: 40px;
 }
 
-/* .footer-col{
-    padding: 0 15px;
-} */
-
-.footer-col h4{
-    color: #7289da;
-    padding-bottom: 10px;
-    
-}
-
 .footer-col h3{
     font-size: 32px;
+    line-height: 1.2;
     color: #7289da;
     padding-bottom: 20px;
     width: 250px;
+}
+
+.lenguages{
+    background: #23272a;
+    color: white;
+    border: none;
+    font-size: 14px;
+   
+}
+
+.footer-col h4{
+    color: #7289da;
+   
 }
 
 hr {
