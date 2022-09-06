@@ -19,6 +19,7 @@
 .debug{ /*da rimuovere*/
     border: 1px solid black;
     min-height: 100px;
+    background-color: aqua;
 }
 
 /* GENERAL RULES */
@@ -137,4 +138,42 @@ header p{
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+}
+
+.buttons-hero a:hover{ /*mettere ombra e zoom*/
+    text-decoration: underline;
+}
+
+/*MAIN */
+
+main h2{
+    font-size: 38px;
+    padding-bottom: 20px;
+}
+
+main p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.flex-containe{
+    max-width: 1170px;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.img-main{
+    width: 60%;
+    padding-right: 20px;
+}
+
+.txt{
+    width: 40%;
+    padding-left: 70px;
+    padding-top: 100px;
 }
