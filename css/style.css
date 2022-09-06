@@ -109,8 +109,8 @@ header nav ul{
 
 .hero{
     background-image: url('../img/jumbo.png');
-    background-size: contain;
-    height: 445px; 
+    background-size: cover;
+    height: 620px; 
     color: white; 
 
     position: relative;
