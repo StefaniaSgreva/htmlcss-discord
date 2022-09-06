@@ -110,20 +110,23 @@ header nav ul{
 .hero{
     background-image: url('../img/jumbo.png');
     background-size: cover;
-    height: 620px; 
+    height: 480px; 
     color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    position: relative;
+    /* position: relative; */
 }
 
 .inner-hero{
-    /* max-width: 850px; */
     text-align: center;
+    max-width: 750px;
 
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .buttons-hero{
@@ -193,6 +196,12 @@ main p{
     column-gap: 50px;
 }
 
+.wave svg{
+    color: lightgrey;
+    display: block;
+}
+
+
 .single-column{
    text-align: center;
     padding-bottom: 150px;
@@ -214,6 +223,7 @@ main p{
     font-size: 28px;
    padding-bottom: 50px; 
 }
+
 
 
 
@@ -269,6 +279,10 @@ hr {
     padding: 20px 10px 0 0;
     color: white;
 }
+
+
+
+
 
 
  
