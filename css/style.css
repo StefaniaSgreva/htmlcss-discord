@@ -146,25 +146,36 @@ header p{
 
 /*MAIN */
 
+.bg-gray{
+    background-color: var(--gray);
+}
+
 main h2{
     font-size: 38px;
     padding-bottom: 20px;
 }
 
+main h3{
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+
 main p{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
-.flex-containe{
+.flex-container, .single-column{
     max-width: 1170px;
     width: 70%;
     margin: 0 auto;
-    padding-top: 50px;
+}
+
+.flex-container{
+    padding: 100px  0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: flex-start;
 }
 
 .img-main{
@@ -175,5 +186,46 @@ main p{
 .txt{
     width: 40%;
     padding-left: 70px;
-    padding-top: 100px;
+    padding-top: 20px;
 }
+
+.row-reverse{
+    flex-direction: row-reverse; 
+}
+
+.row-reverse .txt{
+   padding-right: 60px;
+   padding-left: 0;
+}
+
+.wave svg{
+    color: var(--gray);
+    display: block;
+    padding-top: 30px;
+}
+
+.wave-bottom svg{
+    color: var(--gray);
+    display: block;
+    transform: rotate(180deg);
+    
+}
+
+.single-column{
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.contents{
+    width: 800px;
+}
+
+
+
+
+
