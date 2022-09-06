@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15417342d295584c702",applicationID:"525287958"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="CLTTH81DO98u8iYGOocrz0ggTShWYBPrdwNCVpd3">
+<title>italian flag | Free SVG</title>
+
+<meta name="description" content="As it didnt exist on Open Clipart, here is the italian Flag, enjoy">
+<meta name="author" content="Vedran">
+
+<link href='https://fonts.googleapis.com' rel=’preconnect’ crossorigin>
+<link href='https://www.google-analytics.com' rel=’preconnect’ crossorigin>
+<link href='https://pagead2.googlesyndication.com' rel=’preconnect’ crossorigin>
+<link href='https://partner.googleadservices.com' rel=’preconnect’ crossorigin>
+<link href='https://googleads.g.doubleclick.net' rel=’preconnect’ crossorigin>
+<link href='https://www.googletagservices.com' rel=’preconnect’ crossorigin>
+<link media="all" type="text/css" rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css    ">
+
+
+<link media="all" type="text/css" rel="stylesheet" href="https://freesvg.org/css/frontend.css?id=0c93133572d9df596b19">
+<link media="all" type="text/css" rel="stylesheet" href="https://freesvg.org/js/select2/select2.min.css">
+<script data-ad-client="ca-pub-4767662663033227" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>
+            window.Laravel = {"csrfToken":"CLTTH81DO98u8iYGOocrz0ggTShWYBPrdwNCVpd3"}        </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147217457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147217457-1');
+</script>
+</head>
+<body id="app-layout">
+<div id="app">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top black-bg">
+<div class="container">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsMain" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="https://freesvg.org"><img height="40px" src="/img/svg-logo-4.png" /></a>
+<div class="collapse navbar-collapse" id="navbarsMain">
+<div class="navbar-nav mr-auto">
+<a class="nav-link " href="https://freesvg.org">
+<i class="fa fa-home"></i>
+</a>
+<a class="nav-link " href="/pages/about-us">About</a>
+<a class="nav-link" rel="nofollow" href="https://creativecommons.org/publicdomain/zero/1.0/ " target="_blank">License</a>
+<a class="nav-link " href="/contact">Contact</a>
+<a class="nav-link " href="https://forum.freesvg.org" target="_blank">Forum</a>
+</div>
+<div class="navbar-nav">
+<a class="nav-link " href="https://freesvg.org/login">Login</a>
+<a class="nav-link " href="https://freesvg.org/register">Register</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="highlight">
+<div class="cover  bg-overlay-black-50" style="background-image: url(/img/detail-background-svg.jpg);    background-size: cover;">
+<div class="slider-content-middle">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12">
+<div class="slider-content text-center">
+<h1 class="text-white mt-20 d-none d-lg-block"> italian flag </h1>
+<form action="/search/" method="POST">
+<div class="row justify-content-center form pb-20 mt-50">
+<div class="col-md-5 ">
+<input type="search" class="form-control" name="q" placeholder="Search here">
+<p class="d-block mt-5 popular">Popular SVG vectors:
+<a href="https://freesvg.org/tag/War">War </a>,
+<a href="https://freesvg.org/tag/peace">Peace </a>,
+<a href="https://freesvg.org/tag/cricut-svg">Cricut svg </a>,
+<a href="https://freesvg.org/tag/Ukraine">Ukraine</a>,
+<a href="https://freesvg.org/tag/love">Love </a>,
+<a href="https://freesvg.org/search?query=svg%20cut&q=svg%20cut">Svg cut file </a>
+</p>
+</div>
+<div class="col-lg-2 col-sm-3 col-xs-12 mt-sm-20">
+<input type="submit" class="button btn-block" value="Search">
+</div>
+<input type="hidden" name="_token" value="CLTTH81DO98u8iYGOocrz0ggTShWYBPrdwNCVpd3"> </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="main-container container-fluid py-4">
+<div class="content">
+<div class="main-body-wrapper">
+<div class='main-body'>
+<div class='page-title-wrapper'>
+<div class="container-fluid mb-40 text-center">
+<div style="color:#999;text-align: center;font-size:12px">
+<span>
+Advertisements
+</span>
+</div>
+
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4767662663033227" data-ad-slot="5687551507"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<h2>italian flag</h2>
+<div class='row-fluid detail-wrapper'>
+<div class='main-image'>
+<div class='main-image-photo text-center'>
+<div itemscope itemtype="http://schema.org/ImageObject">
+<meta itemprop="license" content="https://creativecommons.org/publicdomain/zero/1.0/">
+<meta itemprop="description" content=" As it didnt exist on Open Clipart, here is the italian Flag, enjoy">
+<meta itemprop="acquireLicensePage" content="https://creativecommons.org/publicdomain/zero/1.0/">
+<meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="isFamilyFriendly" content="true">
+<meta itemprop="representativeOfPage" content="true">
+<meta itemprop="thumbnailUrl" content="https://freesvg.org/storage/img/thumb/italian-flag.png">
+<meta itemprop="contentUrl" content="https://freesvg.org/img/italian-flag.png">
+<meta itemprop="caption" content=" italian flag">
+</div>
+<img itemprop="contentUrl" src="/img/italian-flag.png" alt="italian flag" class='vec_veliki'>
+</div>
+<div class="download">
+<a href="/download/108634" class="btn btn-green btn-lg">
+Download SVG </a></div>
+<div class="download">
+<a href="https://freesvg.org/converts/108634/2400" class="btn btn-blue btn-sm pt-2 pb-2">
+Large PNG <small>2400px	</small> </a>
+<a href="https://freesvg.org/converts/108634/300" class="btn btn-blue btn-sm pt-2 pb-2">
+Small PNG <small>300px	</small> </a>
+</div>
+</div>
+<div class="sponsored-main-detail">
+<div class="istock-main-detail">
+<div class="istock">
+<div class="istock-header"><img src="/img/sponsor_shutterstock.png" alt="">
+<p>
+<a style="color:#1a1a1a;text-decoration: underline" href="https://shutterstock.7eer.net/c/2022575/1424089/1305" id="919290">
+Get 15% off at Shutterstock! Use code: FSVG15 at checkout! (Valid until 1/31/23))</a>
+<img height="0" width="0" src="https://shutterstock.7eer.net/i/2022575/1424089/1305" style="position:absolute;visibility:hidden;" border="0" />
+<div class="clearfix"></div>
+</div>
+<div class="istock-img">
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D1137172310">
+<div style="max-width:150px; height:100px; overflow:hidden; background-image: url('https://thumb1.shutterstock.com/thumb_large/913924/1137172310/stock-vector-big-set-of-italian-ribbons-symbols-icons-and-flags-isolated-on-a-white-background-made-in-italy-1137172310.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D95764528">
+<div style="max-width:150px; height:100px; overflow:hidden; background-image: url('https://thumb9.shutterstock.com/thumb_large/9156/95764528/stock-vector-flag-italy-95764528.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D1721916283">
+<div style="max-width:150px; height:100px; overflow:hidden; background-image: url('https://thumb1.shutterstock.com/thumb_large/2692603/1721916283/stock-vector-italian-flag-icon-different-shapes-italy-map-vector-set-1721916283.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D592035314">
+<div style="max-width:150px; height:105px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/2909389/592035314/stock-vector-flag-of-italy-brush-stroke-background-592035314.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D1812716509">
+<div style="max-width:150px; height:40px; overflow:hidden; background-image: url('https://thumb1.shutterstock.com/thumb_large/1341310/1812716509/stock-vector-italian-flag-heart-shaped-ribbon-banner-on-transparent-background-1812716509.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D1040310124">
+<div style="max-width:150px; height:88px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/3034139/1040310124/stock-vector-italy-flag-in-vector-illustration-1040310124.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D2136652341">
+<div style="max-width:0px; height:0px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/3484475/2136652341/stock-vector-set-of-flags-ribbons-signs-with-the-italian-flag-vector-illustration-ready-to-use-for-your-2136652341.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D467631041">
+<div style="max-width:150px; height:92px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/2909389/467631041/stock-vector-flag-of-italy-467631041.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D572541259">
+<div style="max-width:150px; height:100px; overflow:hidden; background-image: url('https://thumb1.shutterstock.com/thumb_large/3220787/572541259/stock-vector-vector-illustration-banner-with-italian-flag-colors-in-a-perspective-view-572541259.jpg')"></div></a>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class='photo-details'>
+<div class='row mb-5'>
+<div class='col-sm-12'>
+<h4>Share</h4>
+<div class="footer-social-big mt-20 mb-20 panel" data-id="108634">
+<ul>
+<li class="facebook mr-5"><a href="#" onclick="    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;" alt="FB"><i class="fa fa-facebook"> </i><span>Facebook</span></a> </li>
+<li class="pinterest mr-5"><a href="//pinterest.com/pin/create/button/?url=https%3A%2F%2Ffreesvg.org%2Fitalian-flag&media=https%3A%2F%2Ffreesvg.org%2Fimg%2Fitalian-flag.png&description=italian flag" data-pin-do="buttonPin" data-pin-config="none"> <i class="fa fa-pinterest"> </i><span>Pinterest</span> </a></li>
+<li class="twitter mr-5"><a href="https://twitter.com/share?text=https://freesvg.org/italian-flag"> <i class="fa fa-twitter"> </i><span>Twitter</span> </a></li>
+<li class="like mr-5"><a> <i id="like108634" class="fa fa-heart "></i> </a> <span id="like108634-bs3">0</span></li>
+<div class="like-btn">
+</div>
+
+</ul>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h4>Description </h4>
+<p>
+As it didnt exist on Open Clipart, here is the italian Flag, enjoy
+</p>
+</div>
+</div>
+<div class='row'>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h4>License</h4>
+<p>
+<a about="https://freesvg.org/img/italian-flag.png" rel="license" href="https://creativecommons.org/licenses/publicdomain/" target="_blank">Public Domain</a></p>
+</div>
+</div>
+<div class='row'>
+<div class="col-lg-6">
+<h4>More about SVG</h4>
+<p><i class="fa fa-eye"></i>
+Size	0.00 MB</p>
+<p><i class="fa fa-calendar"></i>
+Date:	01/09/2020 </p>
+<p>
+<i class="fa fa-download"></i> No. of downloads:	1097 </p>
+</div>
+<div class="col-lg-6">
+<h4> SVG published by</h4>
+<p>
+<a href="https://freesvg.org/by/OpenClipart"> OpenClipart </a> </p>
+<p>
+<p> <i class="fa fa-key"></i> SVG ID: 108634 </p>
+</div>
+</div
+             
+						
+						
+							<div class='row single-tags'>
+<div class='col-sm-12'>
+<h4>Tags</h4>
+<div class='single-photo-tags'>
+<span><a href="https://freesvg.org/tag/country">country</a></span>
+<span><a href="https://freesvg.org/tag/Europa">Europa</a></span>
+<span><a href="https://freesvg.org/tag/Europe">Europe</a></span>
+<span><a href="https://freesvg.org/tag/flag">flag</a></span>
+<span><a href="https://freesvg.org/tag/green">green</a></span>
+<span><a href="https://freesvg.org/tag/Italian">Italian</a></span>
+<span><a href="https://freesvg.org/tag/rectangle">rectangle</a></span>
+<span><a href="https://freesvg.org/tag/square">square</a></span>
+<span><a href="https://freesvg.org/tag/italie">Italie</a></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='clearfix'></div>
+<div id='photos' class='related-photos'>
+<h3> Related SVG images</h3>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="eu-flag-grainy-texture">
+<img src="/storage/img/thumb/Europe-Granite-Thumbs-Up.png" alt="EU flag grainy texture" title="EU flag grainy texture">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-switzerland">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Switzerland.png" alt="Anonymous Flag of Switzerland" title="Anonymous Flag of Switzerland">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-denmark-1592399747">
+<img src="/storage/img/thumb/tobias-Flag-of-Denmark.png" alt="Flag of Denmark-1592399747" title="Flag of Denmark-1592399747">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-basque-spain">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Basque-Spain.png" alt="Anonymous Flag of Basque Spain" title="Anonymous Flag of Basque Spain">
+</a>
+</div></div>
+<div class="photo text-center">
+ <div class="photo-thumbnail-wrap">
+<a href="us-europe-flag-map">
+<img src="/storage/img/thumb/US-Europe-flag-map..png" alt="US Europe flag map" title="US Europe flag map">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-cote-divoire-2016081238">
+<img src="/storage/img/thumb/Flag-of-Cote-dIvoire-2016081238.png" alt="Flag of Cote dIvoire 2016081238" title="Flag of Cote dIvoire 2016081238">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="eu-flag">
+<img src="/storage/img/thumb/EU-flag.png" alt="EU flag" title="EU flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="europe-flag">
+<img src="/storage/img/thumb/europe-flag.png" alt="Flag of EU" title="Flag of EU">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-ireland-1592399882">
+<img src="/storage/img/thumb/tobias-Flag-of-Ireland.png" alt="Flag of Ireland-1592399882" title="Flag of Ireland-1592399882">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="eu-us-flag-map">
+<img src="/storage/img/thumb/EU-US-flag-map.png" alt="Map of Europe (equidistant)" title="Map of Europe (equidistant)">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-europe">
+<img src="/storage/img/thumb/Europe-Flag-Vertical.png" alt="Flag of Europe" title="Flag of Europe">
+</a>
+ </div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-hungary">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Hungary.png" alt="Anonymous Flag of Hungary" title="Anonymous Flag of Hungary">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-bulgaria-1592399602">
+<img src="/storage/img/thumb/tobias-Flag-of-Bulgaria.png" alt="Flag of Bulgaria-1592399602" title="Flag of Bulgaria-1592399602">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-lithuania-1592399843">
+<img src="/storage/img/thumb/tobias-Flag-of-Lithuania.png" alt="Flag of Lithuania-1592399843" title="Flag of Lithuania-1592399843">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="europe-thumbs-up">
+<img src="/storage/img/thumb/Europe-Thumbs-Up.png" alt="Europe Thumbs Up" title="Europe Thumbs Up">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-austria">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Austria.png" alt="Anonymous Flag of Austria" title="Anonymous Flag of Austria">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-belgium-1592399576">
+<img src="/storage/img/thumb/tobias-Flag-of-Belgium.png" alt="Flag of Belgium-1592399576" title="Flag of Belgium-1592399576">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-cyprus-1592399705">
+<img src="/storage/img/thumb/tobias-Flag-of-Cyprus.png" alt="Flag of Cyprus-1592399705" title="Flag of Cyprus-1592399705">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="tobias-flag-of-estonia">
+<img src="/storage/img/thumb/tobias-Flag-of-Estonia.png" alt="Flag of Estonia" title="Flag of Estonia">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="bulgaria-map-flag">
+<img src="/storage/img/thumb/Bulgaria-Map-Flag.png" alt="Bulgaria Map Flag" title="Bulgaria Map Flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-germany">
+<img src="/storage/img/thumb/Flag_of_Germany.png" alt="Flag of Germany" title="Flag of Germany">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="island-of-barra-flag">
+<img src="/storage/img/thumb/Niall-Beag-Barra.png" alt="Island of Barra flag" title="Island of Barra flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-comoros">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Comoros.png" alt="Anonymous Flag of Comoros" title="Anonymous Flag of Comoros">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-togo">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Togo.png" alt="Anonymous Flag of Togo" title="Anonymous Flag of Togo">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+ <a href="flag-of-malta-1577254933">
+<img src="/storage/img/thumb/tobias-Flag-of-Malta.png" alt="Flag of Malta-1577254933" title="Flag of Malta-1577254933">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="slovakia-map-flag">
+<img src="/storage/img/thumb/Slovakia-Map-Flag.png" alt="Slovakia Map Flag" title="Slovakia Map Flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-cyprus">
+<img src="/storage/img/thumb/Anonymous-flag-of-Cyprus.png" alt="Flag of Cyprus" title="Flag of Cyprus">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="poland-map-flag-with-coat-of-arms">
+<img src="/storage/img/thumb/Poland-Map-Flag-With-Coat-Of-Arms.png" alt="Poland Map Flag With Coat Of Arms" title="Poland Map Flag With Coat Of Arms">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="netherlands-map-flag">
+<img src="/storage/img/thumb/Netherlands-Map-Flag.png" alt="Netherlands Map Flag" title="Netherlands Map Flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="netherlands-map-flag-with-stroke">
+<img src="/storage/img/thumb/Netherlands-Map-Flag-With-Stroke.png" alt="Netherlands Map Flag With Stroke" title="Netherlands Map Flag With Stroke">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="monaco-map-flag-with-coat-of-arms">
+<img src="/storage/img/thumb/Monaco-Map-Flag-With-Coat-Of-Arms.png" alt="Monaco Map Flag With Coat Of Arms" title="Monaco Map Flag With Coat Of Arms">
+
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="luxembourg-map-flag-with-stroke-and-coat-of-arms">
+<img src="/storage/img/thumb/Luxembourg-Map-Flag-With-Stroke-And-Coat-Of-Arms.png" alt="Luxembourg Map Flag With Stroke And Coat Of Arms" title="Luxembourg Map Flag With Stroke And Coat Of Arms">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="lithuania-map-flag-with-coat-of-arms">
+<img src="/storage/img/thumb/Lithuania-Map-Flag-With-Coat-Of-Arms.png" alt="Lithuania Map Flag With Coat Of Arms" title="Lithuania Map Flag With Coat Of Arms">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="estonia-map-flag">
+<img src="/storage/img/thumb/Estonia-Map-Flag.png" alt="Estonia Map Flag" title="Estonia Map Flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="estonia-map-flag-with-stroke">
+<img src="/storage/img/thumb/Estonia-Map-Flag-With-Stroke.png" alt="Estonia Map Flag With Stroke" title="Estonia Map Flag With Stroke">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="estonia-map-flag-with-stroke-and-coat-of-arms">
+<img src="/storage/img/thumb/Estonia-Map-Flag-With-Stroke-And-Coat-Of-Arms.png" alt="Estonia Map Flag With Stroke And Coat Of Arms" title="Estonia Map Flag With Stroke And Coat Of Arms">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="denmark-map-flag">
+<img src="/storage/img/thumb/Denmark-Map-Flag.png" alt="Denmark Map Flag" title="Denmark Map Flag">
+</a>
+</div></div>
+
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="denmark-map-flag-with-stroke">
+<img src="/storage/img/thumb/Denmark-Map-Flag-With-Stroke.png" alt="Denmark Map Flag With Stroke" title="Denmark Map Flag With Stroke">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="cyprus-map-flag">
+<img src="/storage/img/thumb/Cyprus-Map-Flag.png" alt="Cyprus Map Flag" title="Cyprus Map Flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="croatia-map-flag">
+<img src="/storage/img/thumb/Croatia-Map-Flag.png" alt="Croatia Map Flag" title="Croatia Map Flag">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="croatia-map-flag-with-stroke">
+<img src="/storage/img/thumb/Croatia-Map-Flag-With-Stroke.png" alt="Croatia Map Flag With Stroke" title="Croatia Map Flag With Stroke">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="bulgaria-map-flag-with-stroke-and-coat-of-arms">
+<img src="/storage/img/thumb/Bulgaria-Map-Flag-With-Stroke-And-Coat-Of-Arms.png" alt="Bulgaria Map Flag With Stroke And Coat Of Arms" title="Bulgaria Map Flag With Stroke And Coat Of Arms">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="austria-map-flag-with-stroke-and-coat-of-arms">
+<img src="/storage/img/thumb/Austria-Map-Flag-With-Stroke-And-Coat-Of-Arms.png" alt="Austria Map Flag With Stroke And Coat Of Arms" title="Austria Map Flag With Stroke And Coat Of Arms">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-monaco">
+ <img src="/storage/img/thumb/tobias-Flag-of-Monaco.png" alt="Flag of Monaco" title="Flag of Monaco">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1268425889">
+<img src="/storage/img/thumb/1268425889.png" alt="Flag of Andorra" title="Flag of Andorra">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="lnasto-green-square-icon-ln">
+<img src="/storage/img/thumb/lnasto-green-square-icon-ln.png" alt="green square icon ln" title="green square icon ln">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anonymous-flag-of-bangladesh">
+<img src="/storage/img/thumb/Anonymous-Flag-of-Bangladesh.png" alt="Flag of Bangladesh" title="Flag of Bangladesh">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-bolivia">
+<img src="/storage/img/thumb/Flag-of-Bolivia.png" alt="Flag of Bolivia" title="Flag of Bolivia">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-chad-2016081237">
+<img src="/storage/img/thumb/Flag-of-Chad-2016081237.png" alt="Flag of Chad 2016081237" title="Flag of Chad 2016081237">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-congo-brazzaville">
+<img src="/storage/img/thumb/tobias-Flag-of-Congo-Brazzaville.png" alt="Flag of Congo Brazzaville" title="Flag of Congo Brazzaville">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-sudan">
+<img src="/storage/img/thumb/tobias-Flag-of-Sudan.png" alt="Flag of Sudan" title="Flag of Sudan">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-botswana">
+<img src="/storage/img/thumb/Flag-of-Botswana.png" alt="Flag of Botswana" title="Flag of Botswana">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-bolivia-2016081245">
+<img src="/storage/img/thumb/Flag-of-Bolivia-2016081245.png" alt="Flag of Bolivia 2016081245" title="Flag of Bolivia 2016081245">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="flag-of-bulgaria-2016081253">
+<img src="/storage/img/thumb/Flag-of-Bulgaria-2016081253.png" alt="Flag of Bulgaria 2016081253" title="Flag of Bulgaria 2016081253">
+</a>
+</div></div>
+<div class='clearfix'></div>
+</div>
+</div>
+</div>
+<div class="sidebar-wrapper">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4767662663033227" data-ad-slot="2867614028" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div class="sidebar-element tags page-tags">
+<h3>Related tags</h3>
+<div class="tags-wrapper">
+<span><a href="/tag/Africa">Africa</a></span>
+<span><a href="/tag/America">America</a></span>
+<span><a href="/tag/Andorra">Andorra</a></span>
+<span><a href="/tag/aqua">aqua</a></span>
+<span><a href="/tag/art">art</a></span>
+<span><a href="/tag/Asia">Asia</a></span>
+<span><a href="/tag/Austria">Austria</a></span>
+<span><a href="/tag/background">background</a></span>
+<span><a href="/tag/Bangladesh">Bangladesh</a></span>
+<span><a href="/tag/banner">banner</a></span>
+<span><a href="/tag/Barra">Barra</a></span>
+<span><a href="/tag/basque">basque</a></span>
+<span><a href="/tag/belgium">belgium</a></span>
+<span><a href="/tag/blue">blue</a></span>
+<span><a href="/tag/Bolivia">Bolivia</a></span>
+<span><a href="/tag/borders">borders</a></span>
+<span><a href="/tag/bovine">bovine</a></span>
+<span><a href="/tag/brand">brand</a></span>
+<span><a href="/tag/Bulgaria">Bulgaria</a></span>
+<span><a href="/tag/carte">carte</a></span>
+<span><a href="/tag/cartography">cartography</a></span>
+<span><a href="/tag/Chad">Chad</a></span>
+<span><a href="/tag/circle">circle</a></span>
+<span><a href="/tag/clip-art">clip-art</a></span>
+<span><a href="/tag/clock">clock</a></span>
+<span><a href="/tag/Comoros">Comoros</a></span>
+<span><a href="/tag/Congo">Congo</a></span>
+<span><a href="/tag/country">country</a></span>
+<span><a href="/tag/crest">crest</a></span>
+<span><a href="/tag/Croatia">Croatia</a></span>
+<span><a href="/tag/cross">cross</a></span>
+<span><a href="/tag/Cyprus">Cyprus</a></span>
+<span><a href="/tag/debt">debt</a></span>
+<span><a href="/tag/Denmark">Denmark</a></span>
+<span><a href="/tag/Deutschland">Deutschland</a></span>
+<span><a href="/tag/drink">drink</a></span>
+<span><a href="/tag/Dutch">Dutch</a></span>
+<span><a href="/tag/emblem">emblem</a></span>
+<span><a href="/tag/Estonia">Estonia</a></span>
+<span><a href="/tag/EU">EU</a></span>
+<span><a href="/tag/Europa">Europa</a></span>
+<span><a href="/tag/Europe">Europe</a></span>
+<span><a href="/tag/flag">flag</a></span>
+<span><a href="/tag/flags">flags</a></span>
+<span><a href="/tag/font">font</a></span>
+<span><a href="/tag/geography">geography</a></span>
+<span><a href="/tag/German">German</a></span>
+<span><a href="/tag/giraffe">giraffe</a></span>
+<span><a href="/tag/granite">granite</a></span>
+<span><a href="/tag/graphics">graphics</a></span>
+<span><a href="/tag/green">green</a></span>
+<span><a href="/tag/Hungary">Hungary</a></span>
+<span><a href="/tag/icon">icon</a></span>
+<span><a href="/tag/illustration">illustration</a></span>
+<span><a href="/tag/Ireland">Ireland</a></span>
+<span><a href="/tag/line">line</a></span>
+<span><a href="/tag/Lithuania">Lithuania</a></span>
+<span><a href="/tag/Logo">Logo</a></span>
+<span><a href="/tag/Malta">Malta</a></span>
+<span><a href="/tag/map">map</a></span>
+<span><a href="/tag/Mediterranean">Mediterranean</a></span>
+<span><a href="/tag/Monaco">Monaco</a></span>
+<span><a href="/tag/nation">nation</a></span>
+<span><a href="/tag/national">national</a></span>
+<span><a href="/tag/orange">orange</a></span>
+<span><a href="/tag/pattern">pattern</a></span>
+<span><a href="/tag/plan">plan</a></span>
+<span><a href="/tag/politics">politics</a></span>
+<span><a href="/tag/purple">purple</a></span>
+<span><a href="/tag/rectangle">rectangle</a></span>
+<span><a href="/tag/red">red</a></span>
+<span><a href="/tag/satire">satire</a></span>
+<span><a href="/tag/Scotland">Scotland</a></span>
+<span><a href="/tag/sign">sign</a></span>
+<span><a href="/tag/slaves">slaves</a></span>
+<span><a href="/tag/Slovakia">Slovakia</a></span>
+<span><a href="/tag/South-America">South-America</a></span>
+<span><a href="/tag/Spain">Spain</a></span>
+<span><a href="/tag/square">square</a></span>
+<span><a href="/tag/star">star</a></span>
+<span><a href="/tag/stars">stars</a></span>
+<span><a href="/tag/Sudan">Sudan</a></span>
+<span><a href="/tag/Switzerland">Switzerland</a></span>
+<span><a href="/tag/symbol">symbol</a></span>
+<span><a href="/tag/tablecloth">tablecloth</a></span>
+<span><a href="/tag/teal">teal</a></span>
+<span><a href="/tag/textile">textile</a></span>
+<span><a href="/tag/Togo">Togo</a></span>
+<span><a href="/tag/turquoise">turquoise</a></span>
+<span><a href="/tag/upload2openclipart">upload2openclipart</a></span>
+<span><a href="/tag/USA">USA</a></span>
+<span><a href="/tag/vectorized">vectorized</a></span>
+<span><a href="/tag/violet">violet</a></span>
+<span><a href="/tag/world">world</a></span>
+<span><a href="/tag/yellow">yellow</a></span>
+<span><a href="/tag/electric-blue">Electric blue</a></span>
+<span><a href="/tag/azure">Azure</a></span>
+<span><a href="/tag/carmine">Carmine</a></span>
+<span><a href="/tag/colorfulness">Colorfulness</a></span>
+<span><a href="/tag/cobalt-blue">Cobalt blue</a></span>
+</div>
+</div>
+<h3 class="content-heading">More from <a href="https://freesvg.org/by/OpenClipart"> OpenClipart </a> </h3>
+<div class="clearfix">
+<div class="more-from-site">
+<a href="cow-1662403954"><img src="https://freesvg.org/img/johnny-automatic-cow.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="cow-1662403954"></a>
+<a href="female-dancer-silhouette-by-david-hofmann"><img src="https://freesvg.org/img/dancer-by-david-hofmann-silhouette.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Female dancer silhouette by David Hofmann"></a>
+<a href="creepy-man-smiling"><img src="https://freesvg.org/img/creepysmileman-colour.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Creepy Man Smiling"></a>
+<a href="animated-chessboard"><img src="https://freesvg.org/img/chessboardmorphanim2.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Animated chessboard"></a>
+<a href="purple-3d-cube"><img src="https://freesvg.org/img/cube.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Purple 3d cube"></a>
+<a href="antique-decorative-frame-with-floral-details"><img src="https://freesvg.org/img/antique-frame-224.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Antique Decorative Frame With Floral Details"></a>
+<a href="antique-decorative-frame-4"><img src="https://freesvg.org/img/antique-frame-220.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Antique Decorative Frame (#4)"></a>
+<a href="religion-workbook"><img src="https://freesvg.org/img/arbeitsheft-religion.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Religion workbook"></a>
+<a href="lady-and-stack-of-books"><img src="https://freesvg.org/img/ladyandstackofbooks-1915.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Lady and Stack of Books"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<footer class="footer page-section-pt black-bg">
+<div class="container">
+<div class="row">
+<div class="col-lg-3  col-sm-6 xs-mb-30">
+<div class="footer-hedding">
+<h6 class="text-white mb-30 mt-10 text-uppercase">Share</h6>
+<div class="footer-social-big">
+<ul>
+<li class="facebook"><a href="#" onclick="    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;" alt="FB"> <i class="fa fa-facebook"> </i><span>Facebook</span></a> </li>
+<li class="pinterest"><a href="//pinterest.com/pin/create/button/?url=https%3A%2F%2Ffreesvg.org%2Fitalian-flag&media=https%3A%2F%2Ffreesvg.org%2Fimg%2Fmain_bg.jpg&description=Rebuilding open clip art database and community" data-pin-do="buttonPin" data-pin-config="none"> <i class="fa fa-pinterest"> </i><span>Pinterest</span> </a></li>
+<li class="twitter"><a href="https://twitter.com/share?text=https://freesvg.org/italian-flag"> <i class="fa fa-twitter"> </i><span>Twitter</span> </a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 sm-mb-30">
+<div class="footer-useful-link footer-hedding">
+<h6 class="text-white mb-30 mt-10 text-uppercase">Useful links</h6>
+<ul>
+<li><a rel="nofollow" href="https://inkscape.org/">Inkscape</a> </li>
+<li><a rel="nofollow" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">What is SVG</a> </li>
+<li><a rel="nofollow" href="https://svgedit.netlify.app/editor/index.html">SVG Edit</a> </li>
+<li><a rel="nofollow" href="http://www.drawsvg.org/drawsvg.html"> Draw SVG</a> </li>
+<li><a rel="nofollow" href="https://www.w3.org/Graphics/SVG/">SVG Logo</a> </li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6 sm-mb-30 xs-mb-30">
+<h6 class="text-white mb-30 mt-10 text-uppercase">About us</h6>
+<p>FreeSVG.org offers free vector images in SVG format with Creative Commons 0 license (public domain).
+You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+<br />It is absolutely not required, but if you like this website, any mention of or link back is highly appreciated.</p>
+</div>
+<div class="col-lg-2 col-sm-6 sm-mb-30">
+<div class="footer-useful-link footer-hedding">
+<h6 class="text-white mb-30 mt-10 text-uppercase">Site links</h6>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/pages/about-us">About</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a rel="nofollow" href="https://creativecommons.org/publicdomain/zero/1.0/ " target="_blank">Public domain license</a></li>
+<li><a rel="nofollow" href="https://forum.freesvg.org " target="_blank">Forum
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 sm-mb-30">
+<a href="https://shutterstock.7eer.net/c/2022575/1294752/1305" target="_blank" id="1178280"><img src="/img/ss300x250.png" border="0" alt="" width="300" height="250" /></a><img height="0" width="0" src="https://shutterstock.7eer.net/i/2022575/1294752/1305" style="position:absolute;visibility:hidden;" border="0" />
+<div class="footer-widget mt-60 ">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<p class="mt-15">
+<a href="#"> Free SVG </a> 2019-2020 </p>
+</div>
+<div class="col-lg-6 col-md-6 ">
+<div class="footer-social mt-10">
+<ul class="text-left text-md-right">
+<li class="list-inline-item"><a href="/pages/api-and-usage">API</a> </li>
+<li class="list-inline-item"><a href="/pages/terms-and-conditions">Terms and conditions </a> </li>
+<li class="list-inline-item"><a href="/pages/privacy-policy">Privacy Policy </a> </li>
+</ul>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</footer> 
+<script defer src="//stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+<script src="https://freesvg.org/js/frontend.js?id=fd71e92afda009fad5db"></script>
+<script src="https://freesvg.org/js/jquerysession.min.js"></script>
+<script src="https://freesvg.org/js/frontend/frontend.min.js"></script>
+<script src="https://freesvg.org/js/select2/select2.min.js"></script>
+<script src="https://freesvg.org/js/share.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {     
+
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+      
+        $('.like').click(function(){    
+            var id = $(this).parents(".panel").data('id');
+            var c = $('#like'+id+'-bs3').html();
+          console.log(c);
+            var cObjId =id;
+            var cObj = $(this);
+             	poruka = $('.like-btn');
+          
+            $.ajax({
+               type:'POST',
+               url:'/like',
+               data:{id:id},
+               success:function(data){
+               
+                 if(data.success<1){
+                
+                    $('#like'+cObjId+'-bs3').html(parseInt(c)-1);
+                    $(cObj).removeClass("like-post");
+                  }else if(data.success>0){
+           
+                    $('#like'+cObjId+'-bs3').html(parseInt(c)+1);
+                    $(cObj).addClass("like-post");
+                  }
+                 else{
+             poruka.addClass("alert alert-error");
+             poruka.html(data.error).slideDown(1000);
+                  
+                  }
+               },
+               
+            });
+
+
+        });      
+      
+            $('.claim').click(function(){    
+            var id = $(this).attr('id');
+            var user=$(this).attr('user');
+            nota = $('#nota');
+             console.log(user);
+            var cObjId =id;
+            var cObj = $(this);
+                    
+            $.ajax({
+               type:'POST',
+               url:'/claim',
+               data:{id:id,
+                     user:user},
+               success:function(data){
+                            
+                 nota.addClass("alert alert-success");
+                 nota.html(data.success).slideDown(1000);
+            
+               },
+               
+            });
+
+
+        });     
+
+                                   
+    }); 
+</script>
+<script>
+$(document).ready(function()
+{
+
+ 
+
+
+    $("#ajax-contact-form").submit(function(e){
+		
+     event.preventDefault();
+            	note = $('#note');
+            var formData = {
+                email     : $('input[name=email]').val(),
+                 _token    : $('input[name=_token]').val()
+                    };
+
+            $.ajax({
+                type     : "POST",
+                url:   '/newsletter',
+                data     : formData,
+                cache    : false,
+
+                success  : function(data) {
+                 note.addClass("alert alert-success");
+                 note.html(data.success).slideDown(1000);
+                }
+            });
+
+
+            return false;
+
+        });
+  
+ 
+
+
+});
+
+</script>
+<div class="js-cookie-consent cookie-consent">
+<span class="cookie-consent__message">
+Your experience on this site will be improved by allowing cookies.
+</span>
+<button class="js-cookie-consent-agree cookie-consent__agree btn btn-green btn-lg">
+Allow cookies
+</button>
+</div>
+<script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'freesvg.org';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 7300);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15417342d295584c702","applicationID":"525287958","transactionName":"ZgMAZUFTWUJTUhcIXl9JI1JHW1hfHVcRDl9FAwxVHUFBVhxCCw5G","queueTime":0,"applicationTime":119,"atts":"SkQDEwlJSkw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"7465ed41686f5a25","version":"2022.8.1","r":1,"token":"3c34c81fdd70440c825cf9135891f70a","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

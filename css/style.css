@@ -1,16 +1,19 @@
-/* colors:
-#3161e0; BLU Header 
-#23272a sort-of-black
-#f6f6f6 GRAY
-#8ea1e1 lilac button
-#7289da lilac txt footer*/
+/* COLORS ROOT  */
 
+:root{
+    --black: #23272a;
+    --white: #ffffff;
+    --gray: #f6f6f6;
+    --blue: #3161e0;
+    --liliac-btn: #8ea1e1 ;
+    --liliac-txt: #7289da ;
+}
 
 /* UTILITY */
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;   
 }
 
 .debug{ /*da rimuovere*/
@@ -22,16 +25,7 @@
 
 body{
     font-family: Helvetica, Arial, sans-serif;
-    background-color: white;
-}
-
-header{
-    background-color: #3161e0;
-}
-
-footer{
-    background-color: #23272a;
-    color: white;
+    background-color: var(--white);
 }
 
 .container{
@@ -39,12 +33,36 @@ footer{
     margin: 0 auto;
 }
 
-/* BUTTONS */
+header{
+    background-color: var(--blue);
+    color: var(--white);;
+}
+
+header footer{
+    color: var(--white);
+}
+
+footer{
+    color: var(--black);
+}
+
+li{
+    list-style: none;
+    font-weight: bold;
+}
+
+li a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
 
 .btn-small{
-    display: block;
-    background-color: white;
-    color: #23272a;
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 20px;
     padding: 10px 12px;
     text-decoration: none;
@@ -53,9 +71,8 @@ footer{
 }
 
 .btn-big{
-    /* display: block; */
-    background-color: white;
-    color: #23272a;
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 50px;
     padding: 15px 30px;
     text-decoration: none;
@@ -63,43 +80,26 @@ footer{
     font-weight: bold;
 }
 
-.black{
-    background-color: #23272a;
-    color: white;
+.btn-black{
+    background-color: var(--black);
+    color: var(--white);
 }
 
-.liliac{
-    background-color: #8ea1e1;
-    color: white;
+.btn-liliac{
+    background-color: var(--liliac-btn);
+    color: var(--white);
 }
 
-/* NAVBAR */
-
-li{
-    list-style: none;
-    font-weight: bold;
-}
-
-li a{
-    color: white;
-    text-decoration: none;    
-}
-
-nav a:hover{
-    text-decoration: underline;
-}
+/* HEADER */
 
 .flexbox{
-    max-width: 80%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-/* HEADER */
-
-header nav.container{
+nav{
     padding: 20px 0;
 }
 
@@ -110,23 +110,26 @@ header nav ul{
 .hero{
     background-image: url('../img/jumbo.png');
     background-size: cover;
-    height: 480px; 
-    color: white; 
+    height: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* position: relative; */
 }
 
 .inner-hero{
     text-align: center;
-    max-width: 750px;
+    max-width: 700px;
+}
 
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+h1{
+    font-size: 42px;
+    padding-bottom: 30px;
+}
+
+header p{
+    font-size: 18px;
+    padding-bottom: 40px;
+    line-height: 1.5;
 }
 
 .buttons-hero{
@@ -135,155 +138,3 @@ header nav ul{
     align-items: center;
     column-gap: 20px;
 }
-
-h1{
-    font-size: 42px;
-    padding-bottom: 50px;
-}
-
-header p{
-    font-size: 18px;
-    padding-bottom: 25px;
-    line-height: 1.5;
-}
-
-/*SECTIONS */
-
-main div{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.bg-gray{
-    background-color: #f6f6f6;
-}
-
-.bg-white{
-    background-color: white;
-}
-
-.flex-container{
-    padding: 100px 0;
-    color: #23272a;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* column-gap: 20px; */
-}  
-
-.txt{
-    max-width: 400px;
-    margin-top: 20px;
-}
-
-main h2{
-    font-size: 42px;
-    padding-bottom: 30px;
-}
-
-main p{
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.flex-container-reverse{
-    padding: 100px 0;
-    color: #23272a;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: flex-start;
-    column-gap: 50px;
-}
-
-.wave svg{
-    color: lightgrey;
-    display: block;
-}
-
-
-.single-column{
-   text-align: center;
-    padding-bottom: 150px;
- 
-}
-
-.contents{
-    width: 700px;
-}
-
-.contents h2{
-    font-size: 32px;
-}
-.contents p{
-    font-size: 14px;
-}
-
-.call-to-acrion h3{
-    font-size: 28px;
-   padding-bottom: 50px; 
-}
-
-
-
-
-
-/* FOOTER */
-
-.footer-container{
-    width: 80%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 70px 0;
-}
-
-.footer-row{
-    line-height: 1.8;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 30px;
-}
-
-.footer-col h3{
-    font-size: 32px;
-    line-height: 1.2;
-    color: #7289da;
-    padding-bottom: 20px;
-    width: 250px;
-}
-
-.lenguages{
-    background: #23272a;
-    color: white;
-    border: none;
-    font-size: 14px;
-   
-}
-
-.footer-col h4{
-    color: #7289da; 
-}
-
-hr {
-    border-color: #7289da;
-}
-
-.footer-bottom{
-   display: flex;
-   justify-content: space-between;
-   padding-top: 30px;
-}
-
-.social-links i{
-    padding: 20px 10px 0 0;
-    color: white;
-}
-
-
-
-
-
-
- 
-
