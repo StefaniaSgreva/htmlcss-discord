@@ -16,12 +16,6 @@
     box-sizing: border-box;   
 }
 
-.debug{ /*da rimuovere*/
-    border: 1px solid black;
-    min-height: 100px;
-    background-color: aqua;
-}
-
 /* GENERAL RULES */
 
 body{
@@ -137,8 +131,8 @@ header p{
     column-gap: 20px;
 }
 
-.buttons-hero a:hover{ /*mettere ombra e zoom*/
-    text-decoration: underline;
+.buttons-hero a:hover{ 
+    box-shadow: 5px 10px 20px var(--gray);
 }
 
 /*MAIN */
@@ -214,8 +208,7 @@ main p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .contents{
