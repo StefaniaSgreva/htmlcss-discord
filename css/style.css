@@ -148,7 +148,7 @@ main h2{
 
 main h3{
     font-size: 28px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 main p{
@@ -213,6 +213,13 @@ main p{
 
 .contents{
     width: 800px;
+}
+
+.call-to-action{
+    background-image: url('../img/stars.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 40px 50px;   
 }
 
 /* FOOTER */
